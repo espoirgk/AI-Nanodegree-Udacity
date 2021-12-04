@@ -1,0 +1,77 @@
+Command Line Arguments:
+     dir = uploaded_images/ 
+    arch = vgg 
+ dogfile = dognames.txt
+
+Pet Image Label Dictionary has 4 key-value pairs.
+Below are 4 of them:
+ 1 key:             Contigo_mug_01.jpg  label:                contigo mug
+ 2 key:        Golden_retriever_01.jpg  label:           golden retriever
+ 3 key:           Ourang_outang_01.jpg  label:              ourang outang
+ 4 key:        Golden_retriever_02.jpg  label:           golden retriever
+
+     MATCH:
+
+       Golden_retriever_02.jpg: 
+Real:           golden retriever   Classifier:               golden retriever
+
+ NOT A MATCH:
+
+            Contigo_mug_01.jpg: 
+Real:                contigo mug   Classifier:                   water bottle
+
+       Golden_retriever_01.jpg: 
+Real:           golden retriever   Classifier:                       leonberg
+
+          Ourang_outang_01.jpg: 
+Real:              ourang outang   Classifier:          gibbon, hylobates lar
+
+# Total Images 4 # Matches: 1 # NOT Matches: 3
+{'Contigo_mug_01.jpg': ['contigo mug', 'water bottle', 0, 0, 0], 'Golden_retriever_01.jpg': ['golden retriever', 'leonberg', 0], 'Ourang_outang_01.jpg': ['ourang outang', 'gibbon, hylobates lar', 0], 'Golden_retriever_02.jpg': ['golden retriever', 'golden retriever', 1]}
+{'Contigo_mug_01.jpg': ['contigo mug', 'water bottle', 0, 0, 0], 'Golden_retriever_01.jpg': ['golden retriever', 'leonberg', 0, 1, 1], 'Ourang_outang_01.jpg': ['ourang outang', 'gibbon, hylobates lar', 0, 0, 0], 'Golden_retriever_02.jpg': ['golden retriever', 'golden retriever', 1]}
+
+     MATCH:
+
+       Golden_retriever_02.jpg: 
+Real:           golden retriever   Classifier:               golden retriever  
+PetLabelDog: 1  ClassLabelDog: 1
+
+ NOT A MATCH:
+
+            Contigo_mug_01.jpg: 
+Real:                contigo mug   Classifier:                   water bottle  
+PetLabelDog: 0  ClassLabelDog: 0
+
+       Golden_retriever_01.jpg: 
+Real:           golden retriever   Classifier:                       leonberg  
+PetLabelDog: 1  ClassLabelDog: 1
+
+          Ourang_outang_01.jpg: 
+Real:              ourang outang   Classifier:          gibbon, hylobates lar  
+PetLabelDog: 0  ClassLabelDog: 0
+
+# Total Images 4 # Matches: 1 # NOT Matches: 3
+
+ ** Statistics from calculates_results_stats() function:
+N Images:  4  N Dog Images:  2  N NotDog Images:  2 
+Pct Corr dog: 100.0 Pct Corr NOTdog: 100.0  Pct Corr Breed:  50.0
+
+ ** Check Statistics - calculated from this function as a check:
+N Images:  4  N Dog Images:  2  N NotDog Images:  2 
+Pct Corr dog: 100.0 Pct Corr NOTdog: 100.0  Pct Corr Breed:  50.0
+
+ Results summary for CNN Model Architecture VGG
+N Images            :   4
+N Dog Images        :   2
+N Not-Dog Images    :   2
+
+ Summary statistics (percentages) on Model Run
+The percentage for pct_match is 25.0
+The percentage for pct_correct_dogs is 100.0
+The percentage for pct_correct_breed is 50.0
+The percentage for pct_correct_notdogs is 100.0
+
+INCORRECT Dog Breed Assignment:
+Real:           golden retriever   Classifier:                       leonberg
+
+** Total Elapsed Runtime: 0:0:3
